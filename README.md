@@ -4,11 +4,11 @@ Example of processing CSV files
 # Installation
 Target: Digital Ocean Centos 8.1 Droplet
 
-yum install autoconf automake gcc-c++ git
+yum install autoconf automake gcc-c++ git make
 
-git clone https://github.com/31hz/cpp_example.git
+git clone https://github.com/31hz/csv_test.git
 
-cd cpp_example
+cd csv_test
 
 git checkout master
 
