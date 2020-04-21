@@ -4,7 +4,7 @@ Example of processing CSV files
 # Installation
 Target: Digital Ocean Centos 8.1 Droplet
 
-yum install autoconf automake gcc-c++ git make
+yum install autoconf automake gcc-c++ git make boost-devel
 
 git clone https://github.com/31hz/csv_test.git
 
