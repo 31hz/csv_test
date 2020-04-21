@@ -7,7 +7,7 @@ AC_INIT([csv_test], [0.1])
 AC_CONFIG_AUX_DIR([build-aux])
 
 # Init automake
-AM_INIT_AUTOMAKE([1.13 subdir-objects -Wall -Werror -std=c++11])
+AM_INIT_AUTOMAKE([1.13 subdir-objects -Wall -Werror ])
 
 # Output 'Makefile'
 AC_CONFIG_FILES([Makefile])
