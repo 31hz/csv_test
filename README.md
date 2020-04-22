@@ -19,5 +19,5 @@ autoreconf -i
 make
 
 # Run
-./csv_test
+./csv_test --concurrency 3 --column 1 --aggregation_function SUM --csvglob='/tmp/*.csv'
 

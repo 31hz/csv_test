@@ -7,7 +7,6 @@
 #include <vector>
 #include <chrono>
 
-
 // Do the file glob comparison and return count of found files
 // Also update the private variable _fileQueue
 int workDispatcher::find_glob_files() {
@@ -77,12 +76,12 @@ void workDispatcher::run() {
     if (count > 0) {
 
         for (unsigned int i = 0; i < _concurrency; i++) {
-            all_threads.push_back(new std::thread(worker(), this, _concurrency, _agg));
+            all_threads.push_back(new std::thread(worker(), this, _column, _agg));
         }
 
         // Wait for all threads to be done
         finished_count = get_finished_count();
-        while (finished_count < count) {
+        while (finished_count < _concurrency) {
 
             // Sleep a little and wait for threads to finish
             // TODO: Ideally this would be event-driven somehow instead of sleeping

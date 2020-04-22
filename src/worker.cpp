@@ -20,9 +20,9 @@ void worker::operator() (class workDispatcher *disp, const int column, const std
         } else {
             process_one_file(nextFile, column, agg);
 
-            disp->inc_finished_count();
         }
     }
+    disp->inc_finished_count();
 }
 
 void worker::process_one_file(const std::string nextFile, const int column, const std::string agg) {
